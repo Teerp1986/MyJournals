@@ -14,7 +14,7 @@ namespace MyJournalsAPI
         {
             var folder = Environment.SpecialFolder.LocalApplicationData;
             var path = Environment.GetFolderPath(folder);
-            DbPath = System.IO.Path.Join(path, "myjournaldb.db");
+            DbPath = System.IO.Path.Join(path, "myjournal1.db");
         }
 
         // The following configures EF to create a Sqlite database file in the

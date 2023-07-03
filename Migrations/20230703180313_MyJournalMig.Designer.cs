@@ -11,8 +11,8 @@ using MyJournalsAPI;
 namespace MyJournalsAPI.Migrations
 {
     [DbContext(typeof(MyJournalDbContext))]
-    [Migration("20230703162426_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20230703180313_MyJournalMig")]
+    partial class MyJournalMig
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,14 +26,29 @@ namespace MyJournalsAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Breakfast")
+                        .HasColumnType("TEXT");
+
                     b.Property<DateTime>("Date")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Desert")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("DietaryNotes")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Dinner")
+                        .HasColumnType("TEXT");
+
                     b.Property<Guid?>("JournalsId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Lunch")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Snacks")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -83,37 +98,6 @@ namespace MyJournalsAPI.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Journals");
-                });
-
-            modelBuilder.Entity("MyJournalsAPI.Models.MealType", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Breakfast")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Desert")
-                        .HasColumnType("TEXT");
-
-                    b.Property<Guid?>("DietaryId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Dinner")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Lunch")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Snacks")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("DietaryId");
-
-                    b.ToTable("MealType");
                 });
 
             modelBuilder.Entity("MyJournalsAPI.Models.Personal", b =>
@@ -180,13 +164,6 @@ namespace MyJournalsAPI.Migrations
                         .HasForeignKey("JournalsId");
                 });
 
-            modelBuilder.Entity("MyJournalsAPI.Models.MealType", b =>
-                {
-                    b.HasOne("MyJournalsAPI.Models.Dietary", null)
-                        .WithMany("MealType")
-                        .HasForeignKey("DietaryId");
-                });
-
             modelBuilder.Entity("MyJournalsAPI.Models.Personal", b =>
                 {
                     b.HasOne("MyJournalsAPI.Models.Journals", null)
@@ -199,11 +176,6 @@ namespace MyJournalsAPI.Migrations
                     b.HasOne("MyJournalsAPI.Models.Journals", null)
                         .WithMany("Travel")
                         .HasForeignKey("JournalsId");
-                });
-
-            modelBuilder.Entity("MyJournalsAPI.Models.Dietary", b =>
-                {
-                    b.Navigation("MealType");
                 });
 
             modelBuilder.Entity("MyJournalsAPI.Models.Journals", b =>

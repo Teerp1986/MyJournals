@@ -23,19 +23,23 @@ namespace MyJournalsAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("Date")
+                    b.Property<string>("Breakfast")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Breakfast")
-                       .HasColumnType("TEXT");
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Desert")
                         .HasColumnType("TEXT");
 
-                    b.Property<Guid?>("DietaryId")
+                    b.Property<string>("DietaryNotes")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Dinner")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid?>("JournalsId")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Lunch")
@@ -46,22 +50,10 @@ namespace MyJournalsAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("DietaryId");
-
-                    b.Property<string>("DietaryNotes")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<Guid?>("JournalsId")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
                     b.HasIndex("JournalsId");
 
                     b.ToTable("Dietary");
                 });
-
 
             modelBuilder.Entity("MyJournalsAPI.Models.Health", b =>
                 {
@@ -193,7 +185,6 @@ namespace MyJournalsAPI.Migrations
 
                     b.Navigation("Travel");
                 });
-           
 #pragma warning restore 612, 618
         }
     }

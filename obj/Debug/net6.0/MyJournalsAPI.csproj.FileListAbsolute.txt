@@ -116,4 +116,3 @@ C:\Users\Tonika Price\source\repos\MyJournals\obj\Debug\net6.0\refint\MyJournals
 C:\Users\Tonika Price\source\repos\MyJournals\obj\Debug\net6.0\MyJournalsAPI.pdb
 C:\Users\Tonika Price\source\repos\MyJournals\obj\Debug\net6.0\MyJournalsAPI.genruntimeconfig.cache
 C:\Users\Tonika Price\source\repos\MyJournals\obj\Debug\net6.0\ref\MyJournalsAPI.dll
-C:\Users\Tonika Price\source\repos\MyJournals\bin\Debug\net6.0\Migrations\MyJournalsMig1.cs

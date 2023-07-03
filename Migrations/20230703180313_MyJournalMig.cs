@@ -1,11 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 namespace MyJournalsAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class MyJournalMig : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -32,11 +33,9 @@ namespace MyJournalsAPI.Migrations
                     Dinner = table.Column<string>(type: "TEXT", nullable: true),
                     Desert = table.Column<string>(type: "TEXT", nullable: true),
                     Snacks = table.Column<string>(type: "TEXT", nullable: true),
-                    DietaryId = table.Column<Guid>(type: "TEXT", nullable: true),
                     DietaryNotes = table.Column<string>(type: "TEXT", nullable: false),
                     JournalsId = table.Column<Guid>(type: "TEXT", nullable: true)
                 },
-
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Dietary", x => x.Id);
@@ -107,7 +106,6 @@ namespace MyJournalsAPI.Migrations
                         principalColumn: "Id");
                 });
 
-
             migrationBuilder.CreateIndex(
                 name: "IX_Dietary_JournalsId",
                 table: "Dietary",
@@ -133,6 +131,9 @@ namespace MyJournalsAPI.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "Dietary");
+
+            migrationBuilder.DropTable(
                 name: "Health");
 
             migrationBuilder.DropTable(
@@ -140,9 +141,6 @@ namespace MyJournalsAPI.Migrations
 
             migrationBuilder.DropTable(
                 name: "Travel");
-
-            migrationBuilder.DropTable(
-                name: "Dietary");
 
             migrationBuilder.DropTable(
                 name: "Journals");
