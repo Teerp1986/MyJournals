@@ -17,6 +17,21 @@ namespace MyJournalsAPI.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.8");
 
+            modelBuilder.Entity("ExcerciseJournalJournals", b =>
+                {
+                    b.Property<Guid>("ExcerciseJournalsId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("JournalsId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("ExcerciseJournalsId", "JournalsId");
+
+                    b.HasIndex("JournalsId");
+
+                    b.ToTable("ExcerciseJournalJournals");
+                });
+
             modelBuilder.Entity("MyJournalsAPI.Models.Dietary", b =>
                 {
                     b.Property<Guid>("Id")
@@ -26,7 +41,7 @@ namespace MyJournalsAPI.Migrations
                     b.Property<string>("Breakfast")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("Date")
+                    b.Property<DateOnly>("Date")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Desert")
@@ -55,13 +70,39 @@ namespace MyJournalsAPI.Migrations
                     b.ToTable("Dietary");
                 });
 
+            modelBuilder.Entity("MyJournalsAPI.Models.ExcerciseJournal", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateOnly>("Date")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Duration")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ExcerciseJournal");
+                });
+
             modelBuilder.Entity("MyJournalsAPI.Models.Health", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("Date")
+                    b.Property<DateOnly>("Date")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Description")
@@ -103,7 +144,7 @@ namespace MyJournalsAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("Date")
+                    b.Property<DateOnly>("Date")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("JournalEntry")
@@ -145,6 +186,21 @@ namespace MyJournalsAPI.Migrations
                     b.HasIndex("JournalsId");
 
                     b.ToTable("Travel");
+                });
+
+            modelBuilder.Entity("ExcerciseJournalJournals", b =>
+                {
+                    b.HasOne("MyJournalsAPI.Models.ExcerciseJournal", null)
+                        .WithMany()
+                        .HasForeignKey("ExcerciseJournalsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MyJournalsAPI.Models.Journals", null)
+                        .WithMany()
+                        .HasForeignKey("JournalsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("MyJournalsAPI.Models.Dietary", b =>

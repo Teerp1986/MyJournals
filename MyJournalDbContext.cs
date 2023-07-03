@@ -7,6 +7,7 @@ namespace MyJournalsAPI
     public class MyJournalDbContext : DbContext
     {
         public DbSet<Journals> Journals { get; set; }
+        public DbSet<ExcerciseJournal> ExerciseJournals { get; set; }
 
         public string? DbPath { get; }
 

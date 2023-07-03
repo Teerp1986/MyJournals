@@ -11,8 +11,10 @@
         public List<Dietary>? Dietary { get; set; }
 
         public List<Travel>? Travel { get; set; }
-    }
 
+        public List<ExcerciseJournal> ExcerciseJournals { get; set; }
+    }
+    
     public class Travel
     {
         public Guid Id { get; set; }
@@ -28,7 +30,7 @@
     {
         public Guid Id { get; set; }
 
-        public DateTime Date { get; set; }
+        public DateOnly Date { get; set; }
 
         public string? Breakfast { get; set; }
 
@@ -48,7 +50,7 @@
     {
         public Guid Id { get; set; }
 
-        public DateTime Date { get; set; }
+        public DateOnly Date { get; set; }
 
         public string HealthIssue { get; set; }
 
@@ -61,7 +63,7 @@
     {
         public Guid Id { get; set; }
 
-        public DateTime Date { get; set; }
+        public DateOnly Date { get; set; }
 
         public string JournalEntry { get; set; }
     }
