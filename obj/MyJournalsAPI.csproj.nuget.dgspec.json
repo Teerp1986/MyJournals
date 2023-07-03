@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tonika Price\\source\\repos\\MyJournalsAPI\\MyJournalsAPI.csproj": {}
+    "C:\\Users\\Tonika Price\\source\\repos\\MyJournals\\MyJournalsAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tonika Price\\source\\repos\\MyJournalsAPI\\MyJournalsAPI.csproj": {
+    "C:\\Users\\Tonika Price\\source\\repos\\MyJournals\\MyJournalsAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tonika Price\\source\\repos\\MyJournalsAPI\\MyJournalsAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Tonika Price\\source\\repos\\MyJournals\\MyJournalsAPI.csproj",
         "projectName": "MyJournalsAPI",
-        "projectPath": "C:\\Users\\Tonika Price\\source\\repos\\MyJournalsAPI\\MyJournalsAPI.csproj",
+        "projectPath": "C:\\Users\\Tonika Price\\source\\repos\\MyJournals\\MyJournalsAPI.csproj",
         "packagesPath": "C:\\Users\\Tonika Price\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tonika Price\\source\\repos\\MyJournalsAPI\\obj\\",
+        "outputPath": "C:\\Users\\Tonika Price\\source\\repos\\MyJournals\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -46,7 +46,7 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Metadata": {
+            "Microsoft.Data.Sqlite.Core": {
               "target": "Package",
               "version": "[7.0.8, )"
             },
@@ -54,17 +54,29 @@
               "target": "Package",
               "version": "[7.0.8, )"
             },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[7.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite.Core": {
+              "target": "Package",
+              "version": "[7.0.8, )"
+            },
             "SQLite": {
               "target": "Package",
               "version": "[3.13.0, )"
             },
+            "SQLitePCLRaw.bundle_e_sqlite3": {
+              "target": "Package",
+              "version": "[2.1.5, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
-            },
-            "System.Reflection.Metadata": {
-              "target": "Package",
-              "version": "[7.0.2, )"
             }
           },
           "imports": [
