@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "B580JSulKz9+50K6KOyCLQuYKseuemchgLVKdYGx2dwJNX9Y2aF6FMdgsQp2CRLIG9KyJCR0aP1W6gT3EfwHIg==",
+  "dgSpecHash": "+YnoGxQgjPLocm0mdUV98/QnlBO2RNzRgXleN2/gZ919hRnCXU9jzH6JgfrUiHT3VP22wjifHDbyEKTrIqkaJQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Tonika Price\\source\\repos\\MyJournalsAPI\\MyJournalsAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Tonika Price\\.nuget\\packages\\microsoft.aspnetcore.metadata\\7.0.8\\microsoft.aspnetcore.metadata.7.0.8.nupkg.sha512",
     "C:\\Users\\Tonika Price\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.8\\microsoft.entityframeworkcore.7.0.8.nupkg.sha512",
     "C:\\Users\\Tonika Price\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.8\\microsoft.entityframeworkcore.abstractions.7.0.8.nupkg.sha512",
     "C:\\Users\\Tonika Price\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.8\\microsoft.entityframeworkcore.analyzers.7.0.8.nupkg.sha512",
@@ -22,6 +23,8 @@
     "C:\\Users\\Tonika Price\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "C:\\Users\\Tonika Price\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
     "C:\\Users\\Tonika Price\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
+    "C:\\Users\\Tonika Price\\.nuget\\packages\\system.collections.immutable\\7.0.0\\system.collections.immutable.7.0.0.nupkg.sha512",
+    "C:\\Users\\Tonika Price\\.nuget\\packages\\system.reflection.metadata\\7.0.2\\system.reflection.metadata.7.0.2.nupkg.sha512",
     "C:\\Users\\Tonika Price\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []
