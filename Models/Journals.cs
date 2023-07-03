@@ -15,12 +15,13 @@
 
     public class Travel
     {
-        public Guid Id { get; set; } = Guid.NewGuid();
+        public Guid Id { get; set; }
+
         public DateOnly Date { get; set; }
 
-        public string? Destination { get; set; }
+        public string Destination { get; set; }
 
-        public string? Duration { get; set; }
+        public string Duration { get; set; }
     }
 
     public class Dietary 
@@ -28,21 +29,19 @@
         public Guid Id { get; set; }
 
         public DateTime Date { get; set; }
-        public List<MealType>? MealType { get; set; }
 
-        public string? DietaryNotes { get; set; }
-      
-    }
-
-    public class MealType
-    {
-        public Guid Id { get; set; }
         public string? Breakfast { get; set; }
+
         public string? Lunch { get; set; }
+
         public string? Dinner { get; set; }
+
         public string? Desert { get; set; }
+
         public string? Snacks { get; set; }
 
+        public string DietaryNotes { get; set; }
+        
     }
 
     public class Health
@@ -51,11 +50,11 @@
 
         public DateTime Date { get; set; }
 
-        public string? HealthIssue { get; set; }
+        public string HealthIssue { get; set; }
 
-        public string? Description { get; set; }
+        public string Description { get; set; }
 
-        public string? Physician { get; set; }
+        public string Physician { get; set; }
     }
 
     public class Personal
@@ -64,6 +63,6 @@
 
         public DateTime Date { get; set; }
 
-        public string? JournalEntry { get; set; }
+        public string JournalEntry { get; set; }
     }
 }

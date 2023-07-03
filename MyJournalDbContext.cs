@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MyJournalsAPI.Models;
-
+using System.Reflection.Metadata;
 
 namespace MyJournalsAPI
 {
@@ -19,8 +19,8 @@ namespace MyJournalsAPI
 
         // The following configures EF to create a Sqlite database file in the
         // special "local" folder for your platform.
-        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 
-            => options.UseSqlite($"Data Source={DbPath}");
+            => optionsBuilder.UseSqlite($"Data Source={DbPath}");
     }
 }
