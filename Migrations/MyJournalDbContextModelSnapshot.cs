@@ -93,7 +93,7 @@ namespace MyJournalsAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ExcerciseJournal");
+                    b.ToTable("ExerciseJournals");
                 });
 
             modelBuilder.Entity("MyJournalsAPI.Models.Health", b =>

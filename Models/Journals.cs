@@ -12,7 +12,7 @@
 
         public List<Travel>? Travel { get; set; }
 
-        public List<ExcerciseJournal> ExcerciseJournals { get; set; }
+        public List<ExcerciseJournal>? ExcerciseJournals { get; set; }
     }
     
     public class Travel

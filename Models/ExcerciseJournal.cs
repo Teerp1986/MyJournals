@@ -1,5 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
+
 namespace MyJournalsAPI.Models
 {
     public class ExcerciseJournal
@@ -13,6 +14,7 @@ namespace MyJournalsAPI.Models
         public string Type { get; set; }
 
         public string Duration { get; set; }
+
         [JsonIgnore]
         public List<Journals>? Journals { get; set; }
     }

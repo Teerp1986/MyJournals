@@ -26,10 +26,10 @@ namespace MyJournalsAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ExcerciseJournal>>> GetExerciseJournals()
         {
-          if (_context.ExerciseJournals == null)
-          {
-              return NotFound();
-          }
+            if (_context.ExerciseJournals == null)
+            {
+                return NotFound();
+            }
             return await _context.ExerciseJournals.ToListAsync();
         }
 
@@ -37,10 +37,10 @@ namespace MyJournalsAPI.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<ExcerciseJournal>> GetExcerciseJournal(Guid id)
         {
-          if (_context.ExerciseJournals == null)
-          {
-              return NotFound();
-          }
+            if (_context.ExerciseJournals == null)
+            {
+                return NotFound();
+            }
             var excerciseJournal = await _context.ExerciseJournals.FindAsync(id);
 
             if (excerciseJournal == null)
@@ -54,12 +54,16 @@ namespace MyJournalsAPI.Controllers
         // PUT: api/ExcerciseJournals/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutExcerciseJournal(Guid id, ExcerciseJournal excerciseJournal)
+        public async Task<IActionResult> PutExcerciseJournal(Guid id, ExcerciseJournal excerciseJournal, Journals journals)
         {
             if (id != excerciseJournal.Id)
             {
                 return BadRequest();
             }
+
+            journals.ExcerciseJournals?.ForEach(a =>{
+                _context.Attach(a);
+            });
 
             _context.Entry(excerciseJournal).State = EntityState.Modified;
 
@@ -87,10 +91,10 @@ namespace MyJournalsAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<ExcerciseJournal>> PostExcerciseJournal(ExcerciseJournal excerciseJournal)
         {
-          if (_context.ExerciseJournals == null)
-          {
-              return Problem("Entity set 'MyJournalDbContext.ExerciseJournals'  is null.");
-          }
+            if (_context.ExerciseJournals == null)
+            {
+                return Problem("Entity set 'MyJournalDbContext.ExerciseJournals'  is null.");
+            }
             _context.ExerciseJournals.Add(excerciseJournal);
             await _context.SaveChangesAsync();
 

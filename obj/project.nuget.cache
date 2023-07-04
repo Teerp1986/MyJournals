@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ihhhMcfYKRa1mxgJCT+8e0S4HOvna4BV/bA6AV4yvX1TKL5OY7mfocRWRCCNNYFOU+zhrOfBvwivsslsQtR2pA==",
+  "dgSpecHash": "RmbTIWzMGcmDrZDPANA5iFY40EoEGwVivjeSLvlT+i+HStmb53P0tZFjJySjmscsbTHXuHAee342E4m+TzixAQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Tonika Price\\source\\repos\\MyJournals\\MyJournalsAPI.csproj",
   "expectedPackageFiles": [
@@ -153,6 +153,7 @@
     "C:\\Users\\Tonika Price\\.nuget\\packages\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Tonika Price\\.nuget\\packages\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Tonika Price\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "C:\\Users\\Tonika Price\\.nuget\\packages\\sqlite\\3.13.0\\sqlite.3.13.0.nupkg.sha512",
     "C:\\Users\\Tonika Price\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.5\\sqlitepclraw.bundle_e_sqlite3.2.1.5.nupkg.sha512",
     "C:\\Users\\Tonika Price\\.nuget\\packages\\sqlitepclraw.core\\2.1.5\\sqlitepclraw.core.2.1.5.nupkg.sha512",
     "C:\\Users\\Tonika Price\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.5\\sqlitepclraw.lib.e_sqlite3.2.1.5.nupkg.sha512",
