@@ -54,16 +54,13 @@ namespace MyJournalsAPI.Controllers
         // PUT: api/ExcerciseJournals/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutExcerciseJournal(Guid id, ExcerciseJournal excerciseJournal, Journals journals)
+        public async Task<IActionResult> PutExcerciseJournal(Guid id, ExcerciseJournal excerciseJournal)
         {
             if (id != excerciseJournal.Id)
             {
                 return BadRequest();
             }
-
-            journals.ExcerciseJournals?.ForEach(a =>{
-                _context.Attach(a);
-            });
+          
 
             _context.Entry(excerciseJournal).State = EntityState.Modified;
 
