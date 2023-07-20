@@ -12,55 +12,55 @@ namespace MyJournalsAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class JournalsController : ControllerBase
+    public class TravelsController : ControllerBase
     {
         private readonly MyJournalDbContext _context;
 
-        public JournalsController(MyJournalDbContext context)
+        public TravelsController(MyJournalDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/Journals
+        // GET: api/Travels
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Journals>>> GetJournals()
+        public async Task<ActionResult<IEnumerable<Travel>>> GetTravel()
         {
-          if (_context.Journals == null)
+          if (_context.Travel == null)
           {
               return NotFound();
           }
-            return await _context.Journals.ToListAsync();
+            return await _context.Travel.ToListAsync();
         }
 
-        // GET: api/Journals/5
+        // GET: api/Travels/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Journals>> GetJournals(Guid id)
+        public async Task<ActionResult<Travel>> GetTravel(Guid id)
         {
-          if (_context.Journals == null)
+          if (_context.Travel == null)
           {
               return NotFound();
           }
-            var journals = await _context.Journals.FindAsync(id);
+            var travel = await _context.Travel.FindAsync(id);
 
-            if (journals == null)
+            if (travel == null)
             {
                 return NotFound();
             }
 
-            return journals;
+            return travel;
         }
 
-        // PUT: api/Journals/5
+        // PUT: api/Travels/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutJournals(Guid id, Journals journals)
+        public async Task<IActionResult> PutTravel(Guid id, Travel travel)
         {
-            if (id != journals.Id)
+            if (id != travel.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(journals).State = EntityState.Modified;
+            _context.Entry(travel).State = EntityState.Modified;
 
             try
             {
@@ -68,7 +68,7 @@ namespace MyJournalsAPI.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!JournalsExists(id))
+                if (!TravelExists(id))
                 {
                     return NotFound();
                 }
@@ -81,44 +81,44 @@ namespace MyJournalsAPI.Controllers
             return NoContent();
         }
 
-        // POST: api/Journals
+        // POST: api/Travels
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Journals>> PostJournals(Journals journals)
+        public async Task<ActionResult<Travel>> PostTravel(Travel travel)
         {
-          if (_context.Journals == null)
+          if (_context.Travel == null)
           {
-              return Problem("Entity set 'MyJournalDbContext.Journals'  is null.");
+              return Problem("Entity set 'MyJournalDbContext.Travel'  is null.");
           }
-            _context.Journals.Add(journals);
+            _context.Travel.Add(travel);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetJournals", new { id = journals.Id }, journals);
+            return CreatedAtAction("GetTravel", new { id = travel.Id }, travel);
         }
 
-        // DELETE: api/Journals/5
+        // DELETE: api/Travels/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteJournals(Guid id)
+        public async Task<IActionResult> DeleteTravel(Guid id)
         {
-            if (_context.Journals == null)
+            if (_context.Travel == null)
             {
                 return NotFound();
             }
-            var journals = await _context.Journals.FindAsync(id);
-            if (journals == null)
+            var travel = await _context.Travel.FindAsync(id);
+            if (travel == null)
             {
                 return NotFound();
             }
 
-            _context.Journals.Remove(journals);
+            _context.Travel.Remove(travel);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool JournalsExists(Guid id)
+        private bool TravelExists(Guid id)
         {
-            return (_context.Journals?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Travel?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

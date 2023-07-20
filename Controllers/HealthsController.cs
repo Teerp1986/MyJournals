@@ -12,55 +12,55 @@ namespace MyJournalsAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class JournalsController : ControllerBase
+    public class HealthsController : ControllerBase
     {
         private readonly MyJournalDbContext _context;
 
-        public JournalsController(MyJournalDbContext context)
+        public HealthsController(MyJournalDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/Journals
+        // GET: api/Healths
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Journals>>> GetJournals()
+        public async Task<ActionResult<IEnumerable<Health>>> GetHealth()
         {
-          if (_context.Journals == null)
+          if (_context.Health == null)
           {
               return NotFound();
           }
-            return await _context.Journals.ToListAsync();
+            return await _context.Health.ToListAsync();
         }
 
-        // GET: api/Journals/5
+        // GET: api/Healths/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Journals>> GetJournals(Guid id)
+        public async Task<ActionResult<Health>> GetHealth(Guid id)
         {
-          if (_context.Journals == null)
+          if (_context.Health == null)
           {
               return NotFound();
           }
-            var journals = await _context.Journals.FindAsync(id);
+            var health = await _context.Health.FindAsync(id);
 
-            if (journals == null)
+            if (health == null)
             {
                 return NotFound();
             }
 
-            return journals;
+            return health;
         }
 
-        // PUT: api/Journals/5
+        // PUT: api/Healths/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutJournals(Guid id, Journals journals)
+        public async Task<IActionResult> PutHealth(Guid id, Health health)
         {
-            if (id != journals.Id)
+            if (id != health.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(journals).State = EntityState.Modified;
+            _context.Entry(health).State = EntityState.Modified;
 
             try
             {
@@ -68,7 +68,7 @@ namespace MyJournalsAPI.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!JournalsExists(id))
+                if (!HealthExists(id))
                 {
                     return NotFound();
                 }
@@ -81,44 +81,44 @@ namespace MyJournalsAPI.Controllers
             return NoContent();
         }
 
-        // POST: api/Journals
+        // POST: api/Healths
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Journals>> PostJournals(Journals journals)
+        public async Task<ActionResult<Health>> PostHealth(Health health)
         {
-          if (_context.Journals == null)
+          if (_context.Health == null)
           {
-              return Problem("Entity set 'MyJournalDbContext.Journals'  is null.");
+              return Problem("Entity set 'MyJournalDbContext.Health'  is null.");
           }
-            _context.Journals.Add(journals);
+            _context.Health.Add(health);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetJournals", new { id = journals.Id }, journals);
+            return CreatedAtAction("GetHealth", new { id = health.Id }, health);
         }
 
-        // DELETE: api/Journals/5
+        // DELETE: api/Healths/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteJournals(Guid id)
+        public async Task<IActionResult> DeleteHealth(Guid id)
         {
-            if (_context.Journals == null)
+            if (_context.Health == null)
             {
                 return NotFound();
             }
-            var journals = await _context.Journals.FindAsync(id);
-            if (journals == null)
+            var health = await _context.Health.FindAsync(id);
+            if (health == null)
             {
                 return NotFound();
             }
 
-            _context.Journals.Remove(journals);
+            _context.Health.Remove(health);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool JournalsExists(Guid id)
+        private bool HealthExists(Guid id)
         {
-            return (_context.Journals?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Health?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

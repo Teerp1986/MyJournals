@@ -12,55 +12,55 @@ namespace MyJournalsAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class JournalsController : ControllerBase
+    public class DietariesController : ControllerBase
     {
         private readonly MyJournalDbContext _context;
 
-        public JournalsController(MyJournalDbContext context)
+        public DietariesController(MyJournalDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/Journals
+        // GET: api/Dietaries
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Journals>>> GetJournals()
+        public async Task<ActionResult<IEnumerable<Dietary>>> GetDietary()
         {
-          if (_context.Journals == null)
+          if (_context.Dietary == null)
           {
               return NotFound();
           }
-            return await _context.Journals.ToListAsync();
+            return await _context.Dietary.ToListAsync();
         }
 
-        // GET: api/Journals/5
+        // GET: api/Dietaries/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Journals>> GetJournals(Guid id)
+        public async Task<ActionResult<Dietary>> GetDietary(Guid id)
         {
-          if (_context.Journals == null)
+          if (_context.Dietary == null)
           {
               return NotFound();
           }
-            var journals = await _context.Journals.FindAsync(id);
+            var dietary = await _context.Dietary.FindAsync(id);
 
-            if (journals == null)
+            if (dietary == null)
             {
                 return NotFound();
             }
 
-            return journals;
+            return dietary;
         }
 
-        // PUT: api/Journals/5
+        // PUT: api/Dietaries/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutJournals(Guid id, Journals journals)
+        public async Task<IActionResult> PutDietary(Guid id, Dietary dietary)
         {
-            if (id != journals.Id)
+            if (id != dietary.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(journals).State = EntityState.Modified;
+            _context.Entry(dietary).State = EntityState.Modified;
 
             try
             {
@@ -68,7 +68,7 @@ namespace MyJournalsAPI.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!JournalsExists(id))
+                if (!DietaryExists(id))
                 {
                     return NotFound();
                 }
@@ -81,44 +81,44 @@ namespace MyJournalsAPI.Controllers
             return NoContent();
         }
 
-        // POST: api/Journals
+        // POST: api/Dietaries
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Journals>> PostJournals(Journals journals)
+        public async Task<ActionResult<Dietary>> PostDietary(Dietary dietary)
         {
-          if (_context.Journals == null)
+          if (_context.Dietary == null)
           {
-              return Problem("Entity set 'MyJournalDbContext.Journals'  is null.");
+              return Problem("Entity set 'MyJournalDbContext.Dietary'  is null.");
           }
-            _context.Journals.Add(journals);
+            _context.Dietary.Add(dietary);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetJournals", new { id = journals.Id }, journals);
+            return CreatedAtAction("GetDietary", new { id = dietary.Id }, dietary);
         }
 
-        // DELETE: api/Journals/5
+        // DELETE: api/Dietaries/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteJournals(Guid id)
+        public async Task<IActionResult> DeleteDietary(Guid id)
         {
-            if (_context.Journals == null)
+            if (_context.Dietary == null)
             {
                 return NotFound();
             }
-            var journals = await _context.Journals.FindAsync(id);
-            if (journals == null)
+            var dietary = await _context.Dietary.FindAsync(id);
+            if (dietary == null)
             {
                 return NotFound();
             }
 
-            _context.Journals.Remove(journals);
+            _context.Dietary.Remove(dietary);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool JournalsExists(Guid id)
+        private bool DietaryExists(Guid id)
         {
-            return (_context.Journals?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Dietary?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

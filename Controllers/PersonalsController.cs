@@ -12,55 +12,55 @@ namespace MyJournalsAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class JournalsController : ControllerBase
+    public class PersonalsController : ControllerBase
     {
         private readonly MyJournalDbContext _context;
 
-        public JournalsController(MyJournalDbContext context)
+        public PersonalsController(MyJournalDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/Journals
+        // GET: api/Personals
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Journals>>> GetJournals()
+        public async Task<ActionResult<IEnumerable<Personal>>> GetPersonal()
         {
-          if (_context.Journals == null)
+          if (_context.Personal == null)
           {
               return NotFound();
           }
-            return await _context.Journals.ToListAsync();
+            return await _context.Personal.ToListAsync();
         }
 
-        // GET: api/Journals/5
+        // GET: api/Personals/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Journals>> GetJournals(Guid id)
+        public async Task<ActionResult<Personal>> GetPersonal(Guid id)
         {
-          if (_context.Journals == null)
+          if (_context.Personal == null)
           {
               return NotFound();
           }
-            var journals = await _context.Journals.FindAsync(id);
+            var personal = await _context.Personal.FindAsync(id);
 
-            if (journals == null)
+            if (personal == null)
             {
                 return NotFound();
             }
 
-            return journals;
+            return personal;
         }
 
-        // PUT: api/Journals/5
+        // PUT: api/Personals/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutJournals(Guid id, Journals journals)
+        public async Task<IActionResult> PutPersonal(Guid id, Personal personal)
         {
-            if (id != journals.Id)
+            if (id != personal.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(journals).State = EntityState.Modified;
+            _context.Entry(personal).State = EntityState.Modified;
 
             try
             {
@@ -68,7 +68,7 @@ namespace MyJournalsAPI.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!JournalsExists(id))
+                if (!PersonalExists(id))
                 {
                     return NotFound();
                 }
@@ -81,44 +81,44 @@ namespace MyJournalsAPI.Controllers
             return NoContent();
         }
 
-        // POST: api/Journals
+        // POST: api/Personals
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Journals>> PostJournals(Journals journals)
+        public async Task<ActionResult<Personal>> PostPersonal(Personal personal)
         {
-          if (_context.Journals == null)
+          if (_context.Personal == null)
           {
-              return Problem("Entity set 'MyJournalDbContext.Journals'  is null.");
+              return Problem("Entity set 'MyJournalDbContext.Personal'  is null.");
           }
-            _context.Journals.Add(journals);
+            _context.Personal.Add(personal);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetJournals", new { id = journals.Id }, journals);
+            return CreatedAtAction("GetPersonal", new { id = personal.Id }, personal);
         }
 
-        // DELETE: api/Journals/5
+        // DELETE: api/Personals/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteJournals(Guid id)
+        public async Task<IActionResult> DeletePersonal(Guid id)
         {
-            if (_context.Journals == null)
+            if (_context.Personal == null)
             {
                 return NotFound();
             }
-            var journals = await _context.Journals.FindAsync(id);
-            if (journals == null)
+            var personal = await _context.Personal.FindAsync(id);
+            if (personal == null)
             {
                 return NotFound();
             }
 
-            _context.Journals.Remove(journals);
+            _context.Personal.Remove(personal);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool JournalsExists(Guid id)
+        private bool PersonalExists(Guid id)
         {
-            return (_context.Journals?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Personal?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }
