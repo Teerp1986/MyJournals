@@ -2,9 +2,9 @@
 {
     public class Travel : Journals
     {
-        public string Destination { get; set; }
+        public string? Destination { get; set; }
 
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
     }
 
 }

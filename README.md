@@ -1,6 +1,6 @@
 # MyJournals
 My Journals is an API that allows you to create unlimited number of journals with five categories to choose from; personal, health, dietary, exercise, and travel. 
-This is an app that will be an API using EF. Features used are: project is an API, application is asynchronus, and has  more than 2 tables (entities) in the application that are related and have a function return data from both entities.
+This is an API using Entity Framework. Features used are: project is an API, application is asynchronus, and
 
 A Health journal type that can be used the record entries that you may want to share with your healthcare provider. 
 A Dietary journal to help track your eating habits and meals. 
