@@ -96,7 +96,7 @@ namespace MyJournalsAPI.Controllers
             return CreatedAtAction("GetJournals", new { id = journals.Id }, journals);
         }
 
-        // DELETE: api/Journals/5
+        //DELETE: api/Journals/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteJournals(Guid id)
         {

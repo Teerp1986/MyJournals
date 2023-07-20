@@ -2,6 +2,6 @@
 {
     public class Personal : Journals
     {
-        public string EntryTitle { get; set; }
+        public string? EntryTitle { get; set; }
     }
 }

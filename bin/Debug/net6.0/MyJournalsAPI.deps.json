@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "MyJournalsAPI/1.0.0": {
         "dependencies": {
+          "AWSSDK.DynamoDBv2.Converters": "2.0.1",
           "Microsoft.AspNetCore.Metadata": "7.0.8",
           "Microsoft.Data.Sqlite": "7.0.8",
           "Microsoft.Data.Sqlite.Core": "7.0.8",
@@ -22,10 +23,42 @@
           "SQLitePCLRaw.bundle_e_sqlite3": "2.1.5",
           "SQLitePCLRaw.core": "2.1.5",
           "Swashbuckle.AspNetCore": "6.5.0",
-          "System.Reflection.Metadata": "7.0.2"
+          "System.Reflection.Metadata": "7.0.2",
+          "sv.AWSSDK.DynamoDBv2.Net45": "1.0.1"
         },
         "runtime": {
           "MyJournalsAPI.dll": {}
+        }
+      },
+      "AWSSDK.Core/3.3.22.5": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "System.Net.Requests": "4.0.11",
+          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Security.Cryptography.Csp": "4.3.0",
+          "System.Threading.Thread": "4.0.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.22.5"
+          }
+        }
+      },
+      "AWSSDK.DynamoDBv2/3.3.0": {
+        "dependencies": {
+          "AWSSDK.Core": "3.3.22.5"
+        }
+      },
+      "AWSSDK.DynamoDBv2.Converters/2.0.1": {
+        "dependencies": {
+          "AWSSDK.DynamoDBv2": "3.3.0"
+        },
+        "runtime": {
+          "lib/net45/Amazon.DynamoDBv2.Converters.dll": {
+            "assemblyVersion": "2.0.1.0",
+            "fileVersion": "2.0.1.0"
+          }
         }
       },
       "Azure.Core/1.24.0": {
@@ -2048,6 +2081,17 @@
           }
         }
       },
+      "sv.AWSSDK.DynamoDBv2.Net45/1.0.1": {
+        "dependencies": {
+          "AWSSDK.Core": "3.3.22.5"
+        },
+        "runtime": {
+          "lib/net45/AWSSDK.DynamoDBv2.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.8.0"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore/6.5.0": {
         "dependencies": {
           "Microsoft.Extensions.ApiDescription.Server": "6.0.5",
@@ -2486,6 +2530,23 @@
           "System.Runtime.Handles": "4.3.0"
         }
       },
+      "System.Net.Requests/4.0.11": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Diagnostics.Tracing": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.Net.Http": "4.3.0",
+          "System.Net.Primitives": "4.3.0",
+          "System.Net.WebHeaderCollection": "4.0.1",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Threading.Tasks": "4.3.0"
+        }
+      },
       "System.Net.Sockets/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -2494,6 +2555,14 @@
           "System.Net.Primitives": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Threading.Tasks": "4.3.0"
+        }
+      },
+      "System.Net.WebHeaderCollection/4.0.1": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0"
         }
       },
       "System.Numerics.Vectors/4.5.0": {},
@@ -2866,6 +2935,11 @@
       },
       "System.Threading.Tasks.Dataflow/6.0.0": {},
       "System.Threading.Tasks.Extensions/4.5.4": {},
+      "System.Threading.Thread/4.0.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        }
+      },
       "System.Threading.Timer/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -2934,6 +3008,27 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AWSSDK.Core/3.3.22.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yeqosV1HA5zAdZcfD34iUMIEse3ymR9ESTEGMwo5q7so5XW3/OgfS3BuEyGHalsqOiO7SN6I4Fz6+wSfZZ0tYA==",
+      "path": "awssdk.core/3.3.22.5",
+      "hashPath": "awssdk.core.3.3.22.5.nupkg.sha512"
+    },
+    "AWSSDK.DynamoDBv2/3.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-q+0pjm41XhA8akY8R2bJkD5Abvs5j7IiLG7rce7hrsmyekk/koeRbOfsmI6LXFaG7TdkKN8ojNi1cZ90FEmqBQ==",
+      "path": "awssdk.dynamodbv2/3.3.0",
+      "hashPath": "awssdk.dynamodbv2.3.3.0.nupkg.sha512"
+    },
+    "AWSSDK.DynamoDBv2.Converters/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IwJranfGBJ4HOEpnO0P/rjaTXPeXdBmUBrEd20OFovFCXBk9eR2iSpUNoBWwHnaQvFtNG4cFik9hK28Jz+OBLQ==",
+      "path": "awssdk.dynamodbv2.converters/2.0.1",
+      "hashPath": "awssdk.dynamodbv2.converters.2.0.1.nupkg.sha512"
     },
     "Azure.Core/1.24.0": {
       "type": "package",
@@ -4013,6 +4108,13 @@
       "path": "sqlitepclraw.provider.e_sqlite3/2.1.5",
       "hashPath": "sqlitepclraw.provider.e_sqlite3.2.1.5.nupkg.sha512"
     },
+    "sv.AWSSDK.DynamoDBv2.Net45/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-u7Z5GieeyGXHsEQZB6qVOOOIXRQqMWxPF9GLvUGLuOPXiBk0WSIJyo/qftAXXCDzvf6Ac9xQAtP4zWE23YuBKA==",
+      "path": "sv.awssdk.dynamodbv2.net45/1.0.1",
+      "hashPath": "sv.awssdk.dynamodbv2.net45.1.0.1.nupkg.sha512"
+    },
     "Swashbuckle.AspNetCore/6.5.0": {
       "type": "package",
       "serviceable": true,
@@ -4293,12 +4395,26 @@
       "path": "system.net.primitives/4.3.0",
       "hashPath": "system.net.primitives.4.3.0.nupkg.sha512"
     },
+    "System.Net.Requests/4.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vxGt7C0cZixN+VqoSW4Yakc1Y9WknmxauDqzxgpw/FnBdz4kQNN51l4wxdXX5VY1xjqy//+G+4CvJWp1+f+y6Q==",
+      "path": "system.net.requests/4.0.11",
+      "hashPath": "system.net.requests.4.0.11.nupkg.sha512"
+    },
     "System.Net.Sockets/4.3.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-m6icV6TqQOAdgt5N/9I5KNpjom/5NFtkmGseEH+AK/hny8XrytLH3+b5M8zL/Ycg3fhIocFpUMyl/wpFnVRvdw==",
       "path": "system.net.sockets/4.3.0",
       "hashPath": "system.net.sockets.4.3.0.nupkg.sha512"
+    },
+    "System.Net.WebHeaderCollection/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XX2TIAN+wBSAIV51BU2FvvXMdstUa8b0FBSZmDWjZdwUMmggQSifpTOZ5fNH20z9ZCg2fkV1L5SsZnpO2RQDRQ==",
+      "path": "system.net.webheadercollection/4.0.1",
+      "hashPath": "system.net.webheadercollection.4.0.1.nupkg.sha512"
     },
     "System.Numerics.Vectors/4.5.0": {
       "type": "package",
@@ -4593,6 +4709,13 @@
       "sha512": "sha512-zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
       "path": "system.threading.tasks.extensions/4.5.4",
       "hashPath": "system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+    },
+    "System.Threading.Thread/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gIdJqDXlOr5W9zeqFErLw3dsOsiShSCYtF9SEHitACycmvNvY8odf9kiKvp6V7aibc8C4HzzNBkWXjyfn7plbQ==",
+      "path": "system.threading.thread/4.0.0",
+      "hashPath": "system.threading.thread.4.0.0.nupkg.sha512"
     },
     "System.Threading.Timer/4.3.0": {
       "type": "package",

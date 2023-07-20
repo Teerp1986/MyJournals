@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "bfCByOrbEiGWvFG3iwZ7rBAEUknIG/LlUW2BLN+ID64yjJuRwUFpIoh1DrqfwwWIESMbzXOFaaubQ/QFH86kVw==",
+  "dgSpecHash": "OqpIbLYWW6uOoOEeIgratUoXmAk+WU7fI8JzlD9rhD3dAoZbv7Q3ZNOS+8dxEXp8one9dJqa/f/eyYvvizJNYQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Tonika Price\\source\\repos\\MyJournals\\MyJournalsAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Tonika Price\\.nuget\\packages\\awssdk.core\\3.3.22.5\\awssdk.core.3.3.22.5.nupkg.sha512",
+    "C:\\Users\\Tonika Price\\.nuget\\packages\\awssdk.dynamodbv2\\3.3.0\\awssdk.dynamodbv2.3.3.0.nupkg.sha512",
+    "C:\\Users\\Tonika Price\\.nuget\\packages\\awssdk.dynamodbv2.converters\\2.0.1\\awssdk.dynamodbv2.converters.2.0.1.nupkg.sha512",
     "C:\\Users\\Tonika Price\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Tonika Price\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\Tonika Price\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
@@ -158,6 +161,7 @@
     "C:\\Users\\Tonika Price\\.nuget\\packages\\sqlitepclraw.core\\2.1.5\\sqlitepclraw.core.2.1.5.nupkg.sha512",
     "C:\\Users\\Tonika Price\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.5\\sqlitepclraw.lib.e_sqlite3.2.1.5.nupkg.sha512",
     "C:\\Users\\Tonika Price\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.5\\sqlitepclraw.provider.e_sqlite3.2.1.5.nupkg.sha512",
+    "C:\\Users\\Tonika Price\\.nuget\\packages\\sv.awssdk.dynamodbv2.net45\\1.0.1\\sv.awssdk.dynamodbv2.net45.1.0.1.nupkg.sha512",
     "C:\\Users\\Tonika Price\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "C:\\Users\\Tonika Price\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "C:\\Users\\Tonika Price\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
@@ -198,7 +202,9 @@
     "C:\\Users\\Tonika Price\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
     "C:\\Users\\Tonika Price\\.nuget\\packages\\system.net.http\\4.3.0\\system.net.http.4.3.0.nupkg.sha512",
     "C:\\Users\\Tonika Price\\.nuget\\packages\\system.net.primitives\\4.3.0\\system.net.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\Tonika Price\\.nuget\\packages\\system.net.requests\\4.0.11\\system.net.requests.4.0.11.nupkg.sha512",
     "C:\\Users\\Tonika Price\\.nuget\\packages\\system.net.sockets\\4.3.0\\system.net.sockets.4.3.0.nupkg.sha512",
+    "C:\\Users\\Tonika Price\\.nuget\\packages\\system.net.webheadercollection\\4.0.1\\system.net.webheadercollection.4.0.1.nupkg.sha512",
     "C:\\Users\\Tonika Price\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Tonika Price\\.nuget\\packages\\system.objectmodel\\4.3.0\\system.objectmodel.4.3.0.nupkg.sha512",
     "C:\\Users\\Tonika Price\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
@@ -241,10 +247,32 @@
     "C:\\Users\\Tonika Price\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Users\\Tonika Price\\.nuget\\packages\\system.threading.tasks.dataflow\\6.0.0\\system.threading.tasks.dataflow.6.0.0.nupkg.sha512",
     "C:\\Users\\Tonika Price\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+    "C:\\Users\\Tonika Price\\.nuget\\packages\\system.threading.thread\\4.0.0\\system.threading.thread.4.0.0.nupkg.sha512",
     "C:\\Users\\Tonika Price\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\Tonika Price\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\Tonika Price\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Tonika Price\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'AWSSDK.DynamoDBv2.Converters 2.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "AWSSDK.DynamoDBv2.Converters",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'sv.AWSSDK.DynamoDBv2.Net45 1.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "sv.AWSSDK.DynamoDBv2.Net45",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }
