@@ -28,4 +28,5 @@ namespace MyJournalsAPI
 
             => optionsBuilder.UseSqlite($"Data Source={DbPath}");
     }
+
 }

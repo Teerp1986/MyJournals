@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
@@ -47,6 +48,9 @@ namespace MyJournalsAPI.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Journals");
+
         }
+
+       
     }
 }
