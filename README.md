@@ -2,7 +2,7 @@
 My Journals is a CRUD API that allows you to create unlimited number of journals within five categories to choose from.
 
 Project Features
-+ This is a CRUD API, 
++ This is a CRUD API
 + Application is asynchronus
 + Created a dictionary/list, populated it with several values, retrieved at least one value, and used it in program.
 
