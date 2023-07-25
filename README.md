@@ -13,23 +13,23 @@ A Travel journal type that you can record you travels and cross country adventur
 A Personal Journal for normal Journaling. 
 An Exercise Journal to keep track of your Workout Sessions.
 
-You will need to provide a unique ID for each of the payload GUID. Go to guidgenerator.com
+You will need to provide a unique ID for each of the payload GUID. Go to (guidgenerator.com)
 For the date, your local will generate the current date or enter a custom date using the date format shown in each payload.
 
 Create your own Payload on swagger or try these pre-made payloads.
 
 DIETARIES
-  "id": "Go to guidgenerator.com",
-  "date": "YYYY-MM-DD",
-  "notes": "Ready for my new diet! maximum 2100 calories a day. Here we go!",
-  "breakfast": "Apple Cinnamon Oatmeal with OJ",
-  "lunch": "Turkey Club Wrap with Apple Slices. Green Tea",
-  "dinner": "(0z Filet Mignon, Sauteed Green Beans, Herb Roasted Potates",
-  "desert": "Creme Brulee with Fresh Strawberries",
-  "snacks": "Trail Mix",
-  "totalCalories": 1750,
-  "totalCarbohydrates": 15,
-  "totalProtien": 32
+  * "id": "Go to guidgenerator.com",
+  * "date": "YYYY-MM-DD",
+  * "notes": "Ready for my new diet! maximum 2100 calories a day. Here we go!",
+  * "breakfast": "Apple Cinnamon Oatmeal with OJ",
+  * "lunch": "Turkey Club Wrap with Apple Slices. Green Tea",
+  * "dinner": "(0z Filet Mignon, Sauteed Green Beans, Herb Roasted Potates",
+  * "desert": "Creme Brulee with Fresh Strawberries",
+  * "snacks": "Trail Mix",
+  * "totalCalories": 1750,
+  * "totalCarbohydrates": 15,
+  * "totalProtien": 32
 
 EXERCISE
   "id": "Go to guidgenerator.com",
