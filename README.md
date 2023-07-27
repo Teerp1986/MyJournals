@@ -13,6 +13,9 @@ JOURNAL CATEGORIES
 4. Personal Journal for normal everyday Journaling. Feel free to record your thoughts, dreams, etc!
 5. Exercise Journal to keep track of your Workout Sessions.
 
++++Before starting the app be sure to run the following command:
+  dotnet ef database update
+
 TO RUN THIS API:
 You will need to provide a unique ID for each of the payloads GUID. Go to (guidgenerator.com). This is a free online GUID generator.
 For the "date", your local machine will automatically generate the current date or you can enter a custom date using the date format shown in each payload.
